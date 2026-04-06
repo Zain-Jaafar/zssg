@@ -7,7 +7,8 @@ HtmlNode *create_html_node(char *tag,
                            char *value, 
                            HtmlNode *child, 
                            HtmlNode *right, 
-                           char *props) {
+                           char *props) 
+{
   
   HtmlNode *node = malloc(sizeof *node);
 
@@ -25,16 +26,19 @@ HtmlNode *create_html_node(char *tag,
   return node;
 }
 
-void free_html_node(HtmlNode **node) {
+void free_html_node(HtmlNode **node) 
+{
   free(*node);
   *node = NULL;
 }
 
-char *html_node_to_html(HtmlNode *node) {
+char *html_node_to_html(HtmlNode *node) 
+{
   return "html_node_to_html() Not yet implemented\n";
 }
 
-void print_html_node(HtmlNode *node) {
+void print_html_node(HtmlNode *node) 
+{
   if (node == NULL) {
     printf("HtmlNode(NULL)\n");
   } else {

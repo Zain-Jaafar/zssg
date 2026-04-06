@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-const char *text_type_to_string(TextType textType) {
+const char *text_type_to_string(TextType textType) 
+{
   switch (textType) {
     case TEXT_PLAIN: return "PLAIN";
     case TEXT_BOLD: return "BOLD";
@@ -17,7 +18,8 @@ const char *text_type_to_string(TextType textType) {
 }
 
 TextNode *create_text_node(const char *text, TextType textType, 
-                           const char *url) {
+                           const char *url) 
+{
   TextNode *node = malloc(sizeof *node);
   
   if (node == NULL) {
@@ -32,12 +34,14 @@ TextNode *create_text_node(const char *text, TextType textType,
   return node;
 }
 
-void free_text_node(TextNode **node) {
+void free_text_node(TextNode **node) 
+{
   free(*node);
   *node = NULL;
 }
 
-void print_text_node (TextNode *node) {
+void print_text_node (TextNode *node) 
+{
   if (node == NULL) {
     printf("TextNode(NULL)\n");
   } else {
@@ -48,7 +52,8 @@ void print_text_node (TextNode *node) {
   }
 }
 
-bool text_nodes_are_equal(TextNode *node1, TextNode *node2) {
+bool text_nodes_are_equal(TextNode *node1, TextNode *node2) 
+{
   if (node1->text == node2->text &&
       node1->textType == node2->textType &&
       node1->url == node2->url) {

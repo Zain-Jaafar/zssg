@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
-
+int main() 
+{
   TextNode *node1 = create_text_node("This is a test text node", 
                                     TEXT_PLAIN, 
                                     "https://www.example.com");
